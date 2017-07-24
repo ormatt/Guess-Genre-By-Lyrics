@@ -10,6 +10,7 @@ An attempt to guess a song's genre by its lyrics, using ML models
 * numpy
 * pandas
 * scikit-learn
+* matplotlib
 
 
 ### Installing

@@ -6,8 +6,10 @@ __version__ = '0.1.0'
 
 setup(name='Guess-Lyrics-By-Genre',
       version=__version__,
-      install_requires=['numpy>=1.12.1',
-                    'pandas>=0.20.3',],
+      install_requires=['numpy==1.12.1',
+                    'pandas==0.19.2',
+                    'scikit-learn==0.18.1',
+                    'matplotlib==2.0.0',],
       description="An attempt to guess a song's genre by its lyrics, using ML models",
       long_description=open('README.md').read(),
       author='Or Mattatia, Matt Murch',
