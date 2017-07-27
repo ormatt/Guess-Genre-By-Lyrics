@@ -1,5 +1,5 @@
 #Prevent the actual dataset from being pushed
-genres_lyrics.json
+data/genres_lyrics.json
 
 ### OSX ###
 .DS_Store
