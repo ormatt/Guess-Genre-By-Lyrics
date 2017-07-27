@@ -1,5 +1,11 @@
-#Prevent real dataset from being loaded
+#Prevent real dataset from being pushed
 genres_lyrics.json
+
+#Prevent dumps from being pushed
+dumps/clf.pickle
+dumps/clf_fitted.pickle
+dumps/clf_fitted_score.pickle
+dumps/df.pickle
 
 
 ### OSX ###
