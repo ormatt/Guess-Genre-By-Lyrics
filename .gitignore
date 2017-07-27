@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 #Prevent real dataset from being loaded
 genres_lyrics.json
-=======
-#Prevent the actual dataset from being pushed
-data/genres_lyrics.json
->>>>>>> bdf0b000816ef86f689945095ef3b9dda1bfe575
+
 
 ### OSX ###
 .DS_Store
