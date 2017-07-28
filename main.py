@@ -21,10 +21,10 @@ def main():
     logger.info("Started")
     df = pd.read_json(path_or_buf=DATA_PATH, orient='records', encoding="UTF8")
     logger.debug("Loaded {} rows into df".format(len(df)))
-    df = utils.get_data_subset.crop(df, 1000)
-    # df = utils.get_data_subset.filter_rows_by_string(df,
-    #                                                  [TARGET_COL],
-    #                                                  ['Rock', 'Hip Hop'])
+    df = utils.get_data_subset.crop(df, None, None)
+    df = utils.get_data_subset.filter_rows_by_string(df,
+                                                     [TARGET_COL],
+                                                     ['Rock', 'Hip Hop'])
     df = utils.clean_data.execute_cleaners(df)
     X, y = utils.get_data_subset.get_x_y(df, SAMPLE_COL, TARGET_COL)
 
