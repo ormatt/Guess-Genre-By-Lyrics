@@ -1,5 +1,6 @@
-from utils.logger import logger
+import numpy as np
 
+from utils.logger import logger
 
 def crop(df, nrows=None, cols=None):
     if nrows is not None:
@@ -26,3 +27,19 @@ def filter_rows_by_string(df, cols, strings, action='keep'):
                  '(Filtered out {} rows)'.format(len(df),
                                                  rows_count - len(df)))
     return df
+
+
+def get_x_y(df, sample_col_name, target_col_name):
+    """
+    Get samples data and target (truth) data as numpy ndarray.
+    Args:
+        df: Pandas DataFrame
+        sample_col_name: Samples column name in df
+        target_col_name: Targets column name in df
+
+    Returns:
+
+    """
+    X = df[sample_col_name].values
+    y = df.loc[:, target_col_name].values
+    return X, y
