@@ -15,7 +15,7 @@ setup(name='Guess-Lyrics-By-Genre',
       install_requires=required,
       description="An attempt to guess a song's genre by its lyrics,"
                   "using ML models",
-      long_description=open('README.md').read(),
+      long_description=open(os.path.join(SELF_DIR, 'README.md')).read(),
       author='ormatt, Matt Murch',
       author_email='ormatt@outlook.com, mattmurch@gmail.com',
       url='https://github.com/ormatt/Guess-Lyrics-By-Genre',
