@@ -17,13 +17,13 @@ class Transformer(BaseEstimator, TransformerMixin):
                           ex))
             return
 
-        logger.debug(type(elem))
+        logger.debug("Type is: {}".format(type(elem)))
 
         if isinstance(elem, np.ndarray):
-            logger.debug(elem.shape)
+            logger.debug("numpy ndarray shape is: {}".format(elem.shape))
         elif isinstance(elem, pd.DataFrame):
-            logger.debug(elem.columns.values)
-            logger.debug(elem.info())
+            logger.debug("df columns: {}".format(elem.columns.values))
+            logger.debug("df info: {}".format(elem.info()))
 
     @staticmethod
     def unpack_and_describe(elems):

@@ -4,17 +4,19 @@ from setuptools import setup
 
 __version__ = '0.1.0'
 
+with open('requirements.txt') as reader:
+    required = reader.read().splitlines()
+
 setup(name='Guess-Lyrics-By-Genre',
       version=__version__,
-      install_requires=['pandas==0.19.2',
-                    'scikit-learn==0.18.1',
-                    'matplotlib>=2.0.0',],
-      description="An attempt to guess a song's genre by its lyrics, using ML models",
+      install_requires=required,
+      description="An attempt to guess a song's genre by its lyrics,"
+                  "using ML models",
       long_description=open('README.md').read(),
-      author='Or Mattatia, Matt Murch',
+      author='ormatt, Matt Murch',
       author_email='ormatt@outlook.com, mattmurch@gmail.com',
       url='https://github.com/ormatt/Guess-Lyrics-By-Genre',
-      download_url='https://github.com/ormatt/Guess-Lyrics-By-Genre/tarball/' + __version__,
+      download_url='https://api.github.com/repos/ormatt/Guess-Lyrics-By-Genre/tarball/' + __version__,
       scripts=['main.py'],
       license='GPL - 3.0',
       classifiers=[
@@ -23,11 +25,12 @@ setup(name='Guess-Lyrics-By-Genre',
           'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
           'Operating System :: OS Independent',
           'Programming Language :: Python :: 3',],
-      keywords=('lyrics genre guess* ML machine learning model'),
+      keywords='lyrics genre guess* ML machine learning model',
       packages=['data',
                 'data_cleaners',
                 'feat_exts',
                 'resources',
                 'transformers',
-                'utils',],
+                'utils',
+                ],
       )

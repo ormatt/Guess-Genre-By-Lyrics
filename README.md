@@ -11,6 +11,7 @@ An attempt to guess a song's genre by its lyrics, using ML models
 * pandas
 * scikit-learn
 * matplotlib
+* NLTK and NLTK data (Run python -m nltk.downloader all)
 
 
 ### Installing
@@ -36,7 +37,7 @@ If you would like to contribute, please send a pull request against the master b
 
 ## Authors
 
-* **Or Mattatia** - *Initial work* -  [Or Mattatia](https://github.com/ormatt)
+* **OrMatt** - *Initial work* -  [OrMatt](https://github.com/ormatt)
 * **Matt Murch** - *Initial work* - [Matt Murch](https://github.com/mattmurch)
 
 ## License
