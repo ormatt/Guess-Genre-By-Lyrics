@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 from setuptools import setup
+import os
 
 __version__ = '0.1.0'
 
-with open('requirements.txt') as reader:
+SELF_DIR = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(SELF_DIR, 'requirements.txt')) as reader:
     required = reader.read().splitlines()
 
 setup(name='Guess-Lyrics-By-Genre',
