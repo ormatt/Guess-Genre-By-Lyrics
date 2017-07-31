@@ -1,0 +1,3 @@
+-Fix setup.py
+-Refactor folder structure
+-Refactor gitignore / environment variables
