@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 from utils.logger import logger
-from constants import DATA_PATH
+from constants import DATA_PATH, DF_DUMP_NAME, CLF_DUMP_NAME
 import train_and_test
 import model_pipeline
 import utils.clean_data
@@ -16,7 +16,7 @@ TARGET_COL = 'genre'
 SAMPLE_COL = 'lyrics'
 
 
-def main():
+def main(mode="test"):
     start_time = time.time()
     logger.info("Started")
     df = pd.read_json(path_or_buf=DATA_PATH, orient='records', encoding="UTF8")
@@ -33,11 +33,15 @@ def main():
 
     clf = model_pipeline.get_pipeline(SAMPLE_COL)
 
-    utils.persistence.dump('df', df)
-    utils.persistence.dump('clf', clf)
+    utils.persistence.dump(DF_DUMP_NAME, df)
+    utils.persistence.dump(CLF_DUMP_NAME, clf)
 
-    scores = train_and_test.kfold(X, y, clf)
-    logger.info("Score: {}".format(scores))
+    if mode.lower() == "test":
+        train_and_test.test_using_kfold(X, y, clf)
+    else:
+        train_and_test.train_and_dump(X, y, clf)
+
     logger.info("Finished in {0:.2f} seconds".format(time.time() - start_time))
 
-main()
+if __name__ == '__main__':
+    main(mode="test")

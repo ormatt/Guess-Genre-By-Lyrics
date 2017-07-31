@@ -50,3 +50,8 @@ WORD_TOKENIZER = RegexpTokenizer(r"[a-zA-Z][a-zA-Z']+[a-zA-Z]+|[a-zA-Z]+")
 DEFAULT_GENRE = 'Other'
 
 GENRE_SIMILARITY_THRESHOLD = 70
+
+DF_DUMP_NAME = 'df.pickle'
+CLF_DUMP_NAME = 'clf.pickle'
+CLF_FITTED_DUMP_NAME = 'clf_fitted.pickle'
+CLF_KFOLD_DUMP_NAME = 'clf_fitted_kfold.pickle'
