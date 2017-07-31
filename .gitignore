@@ -1,11 +1,14 @@
 #Prevent real dataset from being pushed
-genres_lyrics.json
+data/dev_genres_lyrics.json
 
 #Prevent dumps from being pushed
 dumps/clf.pickle
 dumps/clf_fitted.pickle
 dumps/clf_fitted_score.pickle
 dumps/df.pickle
+
+#Prevent UD from being pushed
+resources/ud_dev_corpus.txt
 
 
 ### OSX ###
