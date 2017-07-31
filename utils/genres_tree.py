@@ -6,7 +6,7 @@ def build(genres_tree_path):
         genres_subgenres_dict = json.load(reader)
 
         genres_tree = {}
-        for genre, subgenres_list in genres_subgenres_dict.iteritems():
+        for genre, subgenres_list in iter(genres_subgenres_dict.items()):
             for subgenre in subgenres_list:
                 genres_tree[subgenre] = genre
 
