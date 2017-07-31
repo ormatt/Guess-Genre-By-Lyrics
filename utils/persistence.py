@@ -9,13 +9,13 @@ except ImportError:
 
 
 def dump(filename, obj):
-    with open(os.path.join(DUMPS_DIR, filename + '.pickle'), 'wb') as writer:
+    with open(os.path.join(DUMPS_DIR, filename), 'wb') as writer:
         pickle.dump(obj, writer)
         logger.debug('Dumped obj with filename %s to disk' % filename)
 
 
 def load(filename):
-    with open(os.path.join(DUMPS_DIR, filename + '.pickle'), 'rb') as reader:
+    with open(os.path.join(DUMPS_DIR, filename), 'rb') as reader:
         obj = pickle.load(reader)
         logger.debug('Loaded obj with filename %s from disk' % filename)
     return obj
