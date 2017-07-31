@@ -1,5 +1,5 @@
 import constants
-from logger import logger
+from utils.logger import logger
 from fuzzywuzzy import process
 
 
