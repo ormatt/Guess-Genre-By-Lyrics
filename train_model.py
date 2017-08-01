@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from __future__ import absolute_import
 import pandas as pd
 import time
 
@@ -11,6 +11,9 @@ import utils.clean_data
 import utils.persistence
 import utils.normalize_data
 import utils.get_data_subset
+
+# import data_cleaners
+# import feat_exts
 
 TARGET_COL = 'genre'
 SAMPLE_COL = 'lyrics'
@@ -25,8 +28,7 @@ def main(mode="test"):
     df = utils.get_data_subset.filter_rows_by_string(df,
                                                      [TARGET_COL],
                                                      ['Rock',
-                                                      'Hip Hop',
-                                                      'Country'])
+                                                      'Hip Hop'])
     df = utils.clean_data.execute_cleaners(df)
     df = utils.normalize_data.normalize_genres(df, TARGET_COL)
     X, y = utils.get_data_subset.get_x_y(df, SAMPLE_COL, TARGET_COL)
@@ -44,4 +46,4 @@ def main(mode="test"):
     logger.info("Finished in {0:.2f} seconds".format(time.time() - start_time))
 
 if __name__ == '__main__':
-    main(mode="test")
+    main(mode="train")
