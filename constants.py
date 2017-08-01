@@ -17,6 +17,8 @@ FEAT_EXTS_DIR = os.path.join(SCRIPT_DIR, 'feat_exts')
 DATA_CLEANERS_DIR = os.path.join(SCRIPT_DIR, 'data_cleaners')
 DUMPS_DIR = os.path.join(SCRIPT_DIR, 'dumps')
 
+SAMPLE_LYRIC_PATH = os.path.join(RESOURCES_DIR, 'sample_song.txt')
+
 GENRES_TREE_PATH = os.path.join(RESOURCES_DIR, 'genres_tree.json')
 GENRES_TREE, ALL_GENRES_LIST = utils.genres_tree.build(GENRES_TREE_PATH)
 
