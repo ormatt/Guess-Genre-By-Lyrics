@@ -6,12 +6,9 @@ An attempt to guess a song's genre by its lyrics, using ML models
 ## Getting Started
 
 ### Prerequisites
-
-* numpy
-* pandas
-* scikit-learn
-* matplotlib
-* NLTK and NLTK data (Run python -m nltk.downloader all)
+* Anaconda for Python 2 or Python 3
+* fuzzywuzzy
+* python-Levenshtein
 
 
 ### Installing
