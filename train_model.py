@@ -12,9 +12,6 @@ import utils.persistence
 import utils.normalize_data
 import utils.get_data_subset
 
-# import data_cleaners
-# import feat_exts
-
 TARGET_COL = 'genre'
 SAMPLE_COL = 'lyrics'
 
