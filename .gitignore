@@ -10,6 +10,8 @@ dumps/df.pickle
 #Prevent UD from being pushed
 resources/ud_dev_corpus.txt
 
+#Prevent drafts from being pushed
+drafts
 
 ### OSX ###
 .DS_Store
