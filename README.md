@@ -22,10 +22,17 @@ python setup.py install
 
 Run this line to start the application
 
+Train and test a model:
 ```
-./main.py
+$ python ./build_model.py [--train] [--test] [--verbosity {debug,info,critical}]
+```
+Make predictions based on a built model:
+```
+$ python ./make_prediction.py
 ```
 
+### Jupyter Notebook ### 
+A Jupyter Notebook, *GuessGenreByLyrics.ipynb*,  is provided for quick prototyping.
 
 ## Contributing
 
