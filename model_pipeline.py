@@ -1,5 +1,4 @@
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn import tree
 from sklearn.naive_bayes import MultinomialNB
 from transformers import describe_data
 from utils.dynamic_loading import objects_from_modules as get_objs
