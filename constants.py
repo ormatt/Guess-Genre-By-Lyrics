@@ -20,12 +20,11 @@ DUMPS_DIR = os.path.join(SCRIPT_DIR, 'dumps')
 SAMPLE_LYRIC_PATH = os.path.join(RESOURCES_DIR, 'sample_song.txt')
 
 GENRES_TREE_PATH = os.path.join(RESOURCES_DIR, 'genres_tree.json')
-GENRES_TREE, ALL_GENRES_LIST = utils.genres_tree.build(GENRES_TREE_PATH)
+GENRES_TREE, ALL_GENRES_LIST = {}, []
 
 CUSTOM_CORPUS_MIN_LEN = 4
 CUSTOM_CORPUS_PATH = os.path.join(RESOURCES_DIR, 'ud_dev_corpus.txt')
-ENGLISH_CORPUS = utils.corpora.build(path=CUSTOM_CORPUS_PATH,
-                                     min_len=CUSTOM_CORPUS_MIN_LEN)
+ENGLISH_CORPUS = set()
 
 if not os.path.isfile(CUSTOM_CORPUS_PATH):
     CUSTOM_CORPUS_PATH = os.path.join(RESOURCES_DIR, 'custom_corpus.txt')
@@ -57,3 +56,10 @@ DF_DUMP_NAME = 'df.pickle'
 CLF_DUMP_NAME = 'clf.pickle'
 CLF_FITTED_DUMP_NAME = 'clf_fitted.pickle'
 CLF_KFOLD_DUMP_NAME = 'clf_fitted_kfold.pickle'
+
+
+def build_constants():
+    global ENGLISH_CORPUS, GENRES_TREE, ALL_GENRES_LIST
+    ENGLISH_CORPUS = utils.corpora.build(path=CUSTOM_CORPUS_PATH,
+                                         min_len=CUSTOM_CORPUS_MIN_LEN)
+    GENRES_TREE, ALL_GENRES_LIST = utils.genres_tree.build(GENRES_TREE_PATH)
