@@ -13,7 +13,6 @@ def crop(df, nrows=None, cols=None):
 
 def filter_rows_by_string(df, cols, strings, action='keep'):
     rows_count = len(df)
-    logger.debug('Row count is {}'.format(rows_count))
 
     for col in cols:
         if action.lower() == 'remove':
