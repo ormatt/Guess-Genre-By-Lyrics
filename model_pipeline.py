@@ -1,5 +1,6 @@
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn import tree
+from sklearn.naive_bayes import MultinomialNB
 from transformers import describe_data
 from utils.dynamic_loading import objects_from_modules as get_objs
 
@@ -16,6 +17,6 @@ def get_pipeline(sample_col, parallel_jobs=None):
     pipeline = Pipeline([
         ('features', FeatureUnion(feat_ext_tuples, n_jobs=parallel_jobs)),
         ('describe_data', describe_data.Transformer()),
-        ('classifier', tree.DecisionTreeClassifier(max_depth=20)),
+        ('classifier', MultinomialNB()),
     ])
     return pipeline
