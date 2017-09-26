@@ -1,5 +1,6 @@
 #Prevent real dataset from being pushed
 data/dev_genres_lyrics.json
+data/musicdata.sqlite
 
 #Prevent dumps from being pushed
 dumps/clf.pickle
